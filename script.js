@@ -42,7 +42,6 @@ function createGrid() {
     for (let i = 0; i < 16 * 16; i++) {
         const div = document.createElement('div');
         div.classList.toggle('grid-item')
-        div.textContent =  `hi I'm ${i}`;
         gridContainer.appendChild(div);
     }
 }
@@ -50,3 +49,26 @@ createGrid();
 
 
 
+/*
+Set up a “hover” effect so that the grid divs change color when your mouse passes over them, 
+leaving a (pixelated) trail through your grid like a pen would.
+Hint: “Hovering” is what happens when your mouse enters a div and ends 
+when your mouse leaves it. You can set up event listeners for either of those events as a starting point.
+There are multiple ways to change the color of the divs, including:
+adding a new class to the div.
+changing the div’s background color using JavaScript.
+*/
+
+const gridItem = document.querySelectorAll('.grid-item');
+gridItem.forEach(item => item.addEventListener('mouseover', (e) => {
+    changeColor(e.target);
+}
+));
+
+//create a hover event listener that changes the divs color when the mouse hovers it
+// the function to run should be a function that adds a class to it which changes it color
+function changeColor(x) {
+    x.classList.toggle('change-color');
+}
+//create a class that changes the color of a div
+//create an event listener that removes the color when there is no hover event

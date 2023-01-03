@@ -1,10 +1,15 @@
 .grid-container {
     display: grid;
-    grid-auto-rows: 50px;
+    width: 400px;
+    height: 400px;
     
 }
 
 .grid-item {
-    border: 5px solid;
-    border-color: yellow;
+    border: 0.125px solid;
+    border-color: black;
+}
+
+.change-color {
+    background-color: green;
 }
