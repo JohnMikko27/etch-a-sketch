@@ -14,19 +14,28 @@ const greenButton = document.querySelector('.green');
 //will be set when button event listeners are clicked
 let color;
 
-
-
 button.addEventListener('click', setGrid);
 
-blueButton.addEventListener('click', () => color = 'blue');
-redButton.addEventListener('click', () => color = 'red');
-greenButton.addEventListener('click', () => color = 'green');
+initialGrid();
+
+//Creates initial grid
+function initialGrid() {
+    clear();
+    createGrid(16);
+    //comment
+    
+    hoverColor();
+}
 
 function setGrid() {
     clear();
     let n = prompt("How many squares do you want per side?");
     createGrid(n);
     //comment
+    hoverColor();
+}
+
+function hoverColor() {
     const gridItem = document.querySelectorAll('.grid-item');
     gridItem.forEach(item => item.addEventListener('mouseover', (e) => {
         let first = randomRgbValue();
@@ -50,7 +59,6 @@ function createGrid(size) {
 function changeColor(element, a, b, c) {
     element.style.cssText = `background-color: rgb(${a}, ${b}, ${c});`;
 }
-
 
 function clear() {
     const div = document.querySelectorAll('.grid-item');
