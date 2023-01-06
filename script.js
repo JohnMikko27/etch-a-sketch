@@ -29,9 +29,9 @@ function setGrid() {
     //comment
     const gridItem = document.querySelectorAll('.grid-item');
     gridItem.forEach(item => item.addEventListener('mouseover', (e) => {
-        let first = firstRgbValue();
-        let second = secondRgbValue();
-        let third = thirdRgbValue();
+        let first = randomRgbValue();
+        let second = randomRgbValue();
+        let third = randomRgbValue();
         changeColor(e.target, first, second, third);
     }
     ));
@@ -58,17 +58,11 @@ function clear() {
 }
 
 //random number generators to create a random color
-function firstRgbValue() {
+function randomRgbValue() {
     return Math.floor(Math.random() * 256);
 }
 
-function secondRgbValue() {
-    return Math.floor(Math.random() * 256);
-}
 
-function thirdRgbValue() {
-    return Math.floor(Math.random() * 256);
-}
 //get random numbers from 0 to 255 and set that as color
 //have 3 functions that each return a number from 0 to 255
 //and set them equal to variables which will hold that value which we will use in rgb
