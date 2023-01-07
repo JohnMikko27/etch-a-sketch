@@ -9,19 +9,67 @@ rightContainer.appendChild(gridContainer);
 
 const rainbowButton = document.querySelector('#rainbow-button');
 const redColor = document.querySelector('.red');
+const blueColor = document.querySelector('.blue');
+const greenColor = document.querySelector('.green');
+const yellowColor = document.querySelector('.yellow');
+const orangecolor = document.querySelector('.orange');
+const purpleColor = document.querySelector('.purple');
+const blackColor = document.querySelector('.black');
+const whiteColor = document.querySelector('.white');
 
-//will be set when button event listeners are clicked
+//will be set when colored-divs are clicked
 let color;
 
 button.addEventListener('click', setGrid);
+
 initialGrid();
+
 //Creates initial grid
 function initialGrid() {
     clear();
     createGrid(16);
+    eventHandlers();
+}
+
+function eventHandlers() {
     rainbowButton.addEventListener('click', hoverRainbowColor);
-    redColor.addEventListener('click', (e) => {
+    redColor.addEventListener('click', () => {
         color = 'red';
+        hoverColor();
+    })
+
+    blueColor.addEventListener('click', () => {
+        color = 'blue';
+        hoverColor();
+    })
+
+    greenColor.addEventListener('click', () => {
+        color = 'green';
+        hoverColor();
+    })
+
+    yellowColor.addEventListener('click', () => {
+        color = 'yellow';
+        hoverColor();
+    })
+
+    orangecolor.addEventListener('click', () => {
+        color = 'orange';
+        hoverColor();
+    })
+
+    purpleColor.addEventListener('click', () => {
+        color = 'purple';
+        hoverColor();
+    })
+
+    blackColor.addEventListener('click', () => {
+        color = 'black';
+        hoverColor();
+    })
+
+    whiteColor.addEventListener('click', () => {
+        color = 'white';
         hoverColor();
     })
 }
@@ -30,11 +78,7 @@ function setGrid() {
     clear();
     let n = prompt("How many squares do you want per side?");
     createGrid(n);
-    rainbowButton.addEventListener('click', hoverRainbowColor);
-    redColor.addEventListener('click', (e) => {
-        color = 'red';
-        hoverColor();
-    })  
+    eventHandlers();
     
 }
 
