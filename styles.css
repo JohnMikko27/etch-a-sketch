@@ -12,8 +12,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 160px;
-    font-size: 60px;
+    font-size: 70px;
     gap: 20px;
+}
+
+#header div {
+    font-size: 30px;
 }
 
 #container {
@@ -43,13 +47,13 @@ body {
 }
 
 #paint {
+    background-image: url('./images/painting-board.jpg');
+    background-position: center;
+    height: 305px;
+    width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('./images/painting-board.jpg');
-    background-position: center;
-    height: 300px;
-    width: 300px;
 }
 
 .color {
@@ -57,6 +61,14 @@ body {
     border-color: black;
     width: 20px;
     height: 20px;
+}
+
+#color-container {
+    display: flex;
+    gap: 15px;
+    padding-top: 150px;
+    width: 275px;
+    height: 100px;
 }
 
 .grid-container {

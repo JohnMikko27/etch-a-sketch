@@ -7,41 +7,52 @@ gridContainer.classList.add('grid-container');
 const rightContainer = document.querySelector('.right-container');
 rightContainer.appendChild(gridContainer);    
 
-const blueButton = document.querySelector('.blue');
-const redButton = document.querySelector('.red');
-const greenButton = document.querySelector('.green');
+const rainbowButton = document.querySelector('#rainbow-button');
+const redColor = document.querySelector('.red');
 
 //will be set when button event listeners are clicked
 let color;
 
 button.addEventListener('click', setGrid);
-
 initialGrid();
-
 //Creates initial grid
 function initialGrid() {
     clear();
     createGrid(16);
-    //comment
-    
-    hoverColor();
+    rainbowButton.addEventListener('click', hoverRainbowColor);
+    redColor.addEventListener('click', (e) => {
+        color = 'red';
+        hoverColor();
+    })
 }
 
 function setGrid() {
     clear();
     let n = prompt("How many squares do you want per side?");
     createGrid(n);
-    //comment
-    hoverColor();
+    rainbowButton.addEventListener('click', hoverRainbowColor);
+    redColor.addEventListener('click', (e) => {
+        color = 'red';
+        hoverColor();
+    })  
+    
 }
 
-function hoverColor() {
+function hoverRainbowColor() {
     const gridItem = document.querySelectorAll('.grid-item');
     gridItem.forEach(item => item.addEventListener('mouseover', (e) => {
         let first = randomRgbValue();
         let second = randomRgbValue();
         let third = randomRgbValue();
-        changeColor(e.target, first, second, third);
+        changeRainbowColor(e.target, first, second, third);
+    }
+    ));
+}
+
+function hoverColor() {
+    const gridItem = document.querySelectorAll('.grid-item');
+    gridItem.forEach(item => item.addEventListener('mouseover', (e) => {
+        changeColor(e.target, color);
     }
     ));
 }
@@ -56,10 +67,12 @@ function createGrid(size) {
     }
 }
 
-function changeColor(element, a, b, c) {
+function changeRainbowColor(element, a, b, c) {
     element.style.cssText = `background-color: rgb(${a}, ${b}, ${c});`;
 }
 
+//selects all current grid items, if any, and un-appends them
+//so the 'grid-item' elements don't exist on the DOM
 function clear() {
     const div = document.querySelectorAll('.grid-item');
     div.forEach(i => gridContainer.removeChild(i));
@@ -70,19 +83,8 @@ function randomRgbValue() {
     return Math.floor(Math.random() * 256);
 }
 
-
-//get random numbers from 0 to 255 and set that as color
-//have 3 functions that each return a number from 0 to 255
-//and set them equal to variables which will hold that value which we will use in rgb
-
+function changeColor(element, color) {
+    element.style.cssText = `background-color: ${color}`;
+}
 
 
-/*
-Create buttons which change the color of hover effect
-create global variable 'color' which gets set with a button event listener
-Then just pass that global variable 'color' into the changeColor function;
-
-
-
-
-*/
