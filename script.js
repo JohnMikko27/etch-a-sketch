@@ -31,55 +31,61 @@ function initialGrid() {
     eventHandlers();
 }
 
-function eventHandlers() {
-    rainbowButton.addEventListener('click', hoverRainbowColor);
-    redColor.addEventListener('click', () => {
-        color = 'red';
-        hoverColor();
-    })
-
-    blueColor.addEventListener('click', () => {
-        color = 'blue';
-        hoverColor();
-    })
-
-    greenColor.addEventListener('click', () => {
-        color = 'green';
-        hoverColor();
-    })
-
-    yellowColor.addEventListener('click', () => {
-        color = 'yellow';
-        hoverColor();
-    })
-
-    orangecolor.addEventListener('click', () => {
-        color = 'orange';
-        hoverColor();
-    })
-
-    purpleColor.addEventListener('click', () => {
-        color = 'purple';
-        hoverColor();
-    })
-
-    blackColor.addEventListener('click', () => {
-        color = 'black';
-        hoverColor();
-    })
-
-    whiteColor.addEventListener('click', () => {
-        color = 'white';
-        hoverColor();
-    })
-}
-
 function setGrid() {
     clear();
     let n = prompt("How many squares do you want per side?");
     createGrid(n);
-    eventHandlers();
+    //you have to click on the grid container first, and then choose your color
+    //!!! wrong, I want it so that you can click on the color first, and then choose when to color it after clicking
     
+
+}
+
+function eventHandlers() {
+    
+    rainbowButton.addEventListener('click', () => {
+        gridContainer.addEventListener('click', hoverRainbowColor);
+    });
+
+    redColor.addEventListener('click', () => {
+        color = 'red';
+        gridContainer.addEventListener('click', hoverColor);
+    })
+
+    blueColor.addEventListener('click', () => {
+        color = 'blue';
+        gridContainer.addEventListener('click', hoverColor);    
+    })
+
+    greenColor.addEventListener('click', () => {
+        color = 'green';
+        gridContainer.addEventListener('click', hoverColor);
+    })
+
+    yellowColor.addEventListener('click', () => {
+        color = 'yellow';
+        gridContainer.addEventListener('click', hoverColor);
+    })
+
+    orangecolor.addEventListener('click', () => {
+        color = 'orange';
+        gridContainer.addEventListener('click', hoverColor);
+    })
+
+    purpleColor.addEventListener('click', () => {
+        color = 'purple';
+        gridContainer.addEventListener('click', hoverColor);
+    })
+
+    blackColor.addEventListener('click', () => {
+        color = 'black';
+        gridContainer.addEventListener('click', hoverColor);
+    })
+
+    whiteColor.addEventListener('click', () => {
+        color = 'white';
+        gridContainer.addEventListener('click', hoverColor);
+    }); 
 }
 
 function hoverRainbowColor() {
