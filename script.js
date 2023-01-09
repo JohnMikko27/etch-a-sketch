@@ -43,48 +43,46 @@ function setGrid() {
 
 function eventHandlers() {
     
-    rainbowButton.addEventListener('click', () => {
-        gridContainer.addEventListener('click', hoverRainbowColor);
-    });
+    rainbowButton.addEventListener('click', hoverRainbowColor);
 
     redColor.addEventListener('click', () => {
         color = 'red';
-        gridContainer.addEventListener('click', hoverColor);
-    })
+        hoverColor();
+    });
 
     blueColor.addEventListener('click', () => {
         color = 'blue';
-        gridContainer.addEventListener('click', hoverColor);    
-    })
+        hoverColor();
+    });
 
     greenColor.addEventListener('click', () => {
         color = 'green';
-        gridContainer.addEventListener('click', hoverColor);
-    })
+        hoverColor();
+    });
 
     yellowColor.addEventListener('click', () => {
         color = 'yellow';
-        gridContainer.addEventListener('click', hoverColor);
-    })
+        hoverColor();
+    });
 
     orangecolor.addEventListener('click', () => {
         color = 'orange';
-        gridContainer.addEventListener('click', hoverColor);
-    })
+        hoverColor();
+    });
 
     purpleColor.addEventListener('click', () => {
         color = 'purple';
-        gridContainer.addEventListener('click', hoverColor);
-    })
+        hoverColor();
+    });
 
     blackColor.addEventListener('click', () => {
         color = 'black';
-        gridContainer.addEventListener('click', hoverColor);
-    })
+        hoverColor();
+    });
 
     whiteColor.addEventListener('click', () => {
         color = 'white';
-        gridContainer.addEventListener('click', hoverColor);
+        hoverColor();
     }); 
 }
 
