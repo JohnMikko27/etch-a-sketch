@@ -4,6 +4,8 @@ call the different grid and color functions in controller.js
 and then have a function in script.js that allows everything to run when the DOM is loaded
 */
 
+
+
 export function eventHandlers() {
     const rainbowButton = document.querySelector('#rainbow-button')
     rainbowButton.addEventListener('click', hoverRainbowColor);
@@ -67,9 +69,10 @@ function setColor() {
     let color;
     const colors = document.querySelectorAll('.color');
     colors.forEach(colorItem => colorItem.addEventListener('click', (e) => {
-        color = e.target.style.backgroundColor;
+        color = e.target.id;
+        hoverColor(color);
     }));
-    hoverColor(color);
+    
 }
 
 function hoverRainbowColor() {

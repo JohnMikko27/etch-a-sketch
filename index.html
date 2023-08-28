@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-a-Sketch</title>
-    <script src="./script.js" defer ></script>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <div id="header">Etch-a-Sketch
-        <div >By The Master of Disaster</div>
+    <script src="./script.js" type="module" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="header">
+      Etch-a-Sketch
+      <div>By The Master of Disaster</div>
     </div>
     <div id="container">
-        <div class="left-container">
-            <button id="button">Change Grid</button>
-            <button id="rainbow-button">Rainbow</button>
-            <div id="paint">
-                <div id="color-container">
-                    <div class="color red" style="background-color: red;"></div>
-                    <div class="color blue" style="background-color: blue;"></div>
-                    <div class="color green" style="background-color: green;"></div>
-                    <div class="color yellow" style="background-color: yellow;"></div>
-                    <div class="color orange" style="background-color: orange;"></div>
-                    <div class="color purple" style="background-color: purple;"></div>
-                    <div class="color black" style="background-color: black;"></div>
-                    <div class="color white" style="background-color: white;"></div>
-
-                </div>
-            </div>
-            
-            
+      <div class="left-container">
+        <button id="button">Change Grid</button>
+        <button id="rainbow-button">Rainbow</button>
+        <div id="paint">
+          <div id="color-container">
+            <div id="red" class="color" style="background-color: red"></div>
+            <div id="blue" class="color" style="background-color: blue"></div>
+            <div id="green" class="color" style="background-color: green"></div>
+            <div id="yellow" class="color" style="background-color: yellow"></div>
+            <div id="orange" class="color" style="background-color: orange"></div>
+            <div id="purple" class="color" style="background-color: purple"></div>
+            <div id="black" class="color" style="background-color: black"></div>
+            <div id="white" class="color" style="background-color: white"></div>
+          </div>
         </div>
-        <div class="right-container">
-            
-        </div>
-            
+      </div>
+      <div class="right-container">
+      </div>
     </div>
-</body>
+  </body>
 </html>

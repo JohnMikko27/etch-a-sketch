@@ -7,4 +7,5 @@ export function run() {
     setInitialGrid()
     changeGridButton.addEventListener('click', setGridSize);
     eventHandlers();
+   
 }
