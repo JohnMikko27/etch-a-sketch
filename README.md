@@ -10,3 +10,6 @@ to color it
 I tried to do this, but it didn't work. After clicking 
 rainbowButton once, clicking it again won't change color to a 
 random color, but the other colors: red, blue, green, etc. worked
+
+REFACTOR:
+I am going to refactor this project after finishing the to-do list project so that I can improve my code maintainability, module creation, and create elegant code
