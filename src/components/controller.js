@@ -1,10 +1,10 @@
-import { setInitialGrid, setGridSize } from "./grid.js";
-import { handlers } from "./color.js";
+import { setInitialGrid, setGridSize } from './grid';
+import { handlers } from './color';
 
-export function run() {
-    const changeGridButton = document.querySelector('#change-grid-button');
+export default function run() {
+  const changeGridButton = document.querySelector('#change-grid-button');
 
-    setInitialGrid()
-    changeGridButton.addEventListener('click', setGridSize);
-    handlers();
+  setInitialGrid();
+  changeGridButton.addEventListener('click', setGridSize);
+  handlers();
 }

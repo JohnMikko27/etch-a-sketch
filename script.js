@@ -1,2 +1,3 @@
-import { run } from "./src/components/controller.js";
+import run from './src/components/controller';
+
 run();
