@@ -46,19 +46,26 @@ body {
   flex: 1.25;
 }
 
+#color-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  border: 1.5px solid black;
+  padding: 1rem;
+}
+
 .color {
   border: 1px solid;
   border-color: black;
   width: 20px;
   height: 20px;
+  transition: all .2s ease-in-out;
 }
 
-#color-container {
-  display: flex;
-  gap: 15px;
-  padding-top: 150px;
-  width: 275px;
-  height: 100px;
+.color:hover {
+  box-shadow: 1px 2px 6px 1px rgb(174, 174, 174);
+  cursor: pointer;
+  transform: scale(1.4);
 }
 
 #grid-container {
