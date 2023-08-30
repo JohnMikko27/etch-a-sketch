@@ -36,7 +36,7 @@ body {
   background-color: rgba(207, 207, 207, 0.248);
 }
 
-.right-container {
+#right-container {
   display: flex;
   justify-content: center;
   align-items: center;

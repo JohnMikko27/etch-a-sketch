@@ -5,17 +5,17 @@ export function setInitialGrid() {
     createGrid(16);
 }
 
-function createGridContainer() {
-    const gridContainer = document.createElement('div');
-    const rightContainer = document.querySelector('.right-container');
-    gridContainer.setAttribute('id', 'grid-container')
-    rightContainer.appendChild(gridContainer);    
-}
-
 export function setGridSize() {
     clear();
     let size = prompt("How many squares do you want per side?");
     createGrid(size);
+}
+
+function createGridContainer() {
+    const gridContainer = document.createElement('div');
+    const rightContainer = document.querySelector('#right-container');
+    gridContainer.setAttribute('id', 'grid-container')
+    rightContainer.appendChild(gridContainer);    
 }
 
 function createGrid(size) {
@@ -31,7 +31,7 @@ function createGrid(size) {
 }
 
 function displayGrid(gridContainer) {
-    const rightContainer = document.querySelector('.right-container');
+    const rightContainer = document.querySelector('#right-container');
     rightContainer.appendChild(gridContainer);  
 }
 

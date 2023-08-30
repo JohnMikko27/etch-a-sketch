@@ -9,6 +9,7 @@ function setColor() {
     const colors = document.querySelectorAll('.color');
     colors.forEach(colorItem => colorItem.addEventListener('click', (e) => {
         color = e.target.id;
+        //the ID of each color is the name of that color
         hoverColor(color);
     }));
 }
