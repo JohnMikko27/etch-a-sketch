@@ -1,5 +1,6 @@
-import { setInitialGrid, setGridSize } from './grid';
-import { handlers } from './color';
+/* eslint-disable import/extensions */
+import { setInitialGrid, setGridSize } from './grid.js';
+import handlers from './color.js';
 
 export default function run() {
   const changeGridButton = document.querySelector('#change-grid-button');

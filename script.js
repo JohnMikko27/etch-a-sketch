@@ -1,3 +1,4 @@
-import run from './src/components/controller';
+/* eslint-disable import/extensions */
+import run from './src/components/controller.js';
 
 run();
