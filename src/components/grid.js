@@ -1,8 +1,6 @@
-//try to add eslint and other things to format and make code look better and cleaner
-
 export function setInitialGrid() {
     createGridContainer();
-    createGrid(16);
+    displayGrid(createGrid(16));
 }
 
 export function setGridSize() {
@@ -27,7 +25,7 @@ function createGrid(size) {
         gridContainer.appendChild(gridItem);
     }
     gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;   
-    displayGrid(gridContainer);
+    return gridContainer;
 }
 
 function displayGrid(gridContainer) {
