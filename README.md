@@ -13,3 +13,5 @@ random color, but the other colors: red, blue, green, etc. worked
 
 REFACTOR:
 I am going to refactor this project after finishing the to-do list project so that I can improve my code maintainability, module creation, and create elegant code
+
+Live demo: https://johnmikko27.github.io/etch-a-sketch/
