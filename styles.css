@@ -43,7 +43,7 @@ body {
   flex: 2;
 }
 
-.left-container {
+#left-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -94,7 +94,7 @@ body {
   background-color: green;
 }
 
-#button {
+#change-grid-button {
   width: fit-content;
   height: auto;
   border-radius: 6px;
@@ -103,7 +103,7 @@ body {
   transition: all .2s ease-in;
 }
 
-#button:hover,
+#change-grid-button:hover,
 #rainbow-button:hover {
   cursor: pointer;
   background-color: var(--hover-color);

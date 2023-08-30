@@ -1,9 +1,5 @@
 //try to add eslint and other things to format and make code look better and cleaner
 
-
-//maybe create a function that selects right container, creates grid container and then appends grid contaienr to right container
-//and then the fucntions will just add grid items to the grid container   
-
 export function setInitialGrid() {
     createGridContainer();
     createGrid(16);
@@ -13,7 +9,6 @@ function createGridContainer() {
     const gridContainer = document.createElement('div');
     const rightContainer = document.querySelector('.right-container');
     gridContainer.setAttribute('id', 'grid-container')
-
     rightContainer.appendChild(gridContainer);    
 }
 

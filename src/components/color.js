@@ -1,69 +1,8 @@
-/*
-are these good modules???
-call the different grid and color functions in controller.js 
-and then have a function in script.js that allows everything to run when the DOM is loaded
-*/
-
-
-
-export function eventHandlers() {
+export function handlers() {
     const rainbowButton = document.querySelector('#rainbow-button')
     rainbowButton.addEventListener('click', hoverRainbowColor);
-
-    // redColor.addEventListener('click', () => {
-        
-    //     color = 'red';
-    //     hoverColor();
-    // });
-
-    // blueColor.addEventListener('click', () => {
-    //     color = 'blue';
-    //     hoverColor();
-    // });
-
-    // greenColor.addEventListener('click', () => {
-    //     color = 'green';
-    //     hoverColor();
-    // });
-
-    // yellowColor.addEventListener('click', () => {
-    //     color = 'yellow';
-    //     hoverColor();
-    // });
-
-    // orangecolor.addEventListener('click', () => {
-    //     color = 'orange';
-    //     hoverColor();
-    // });
-
-    // purpleColor.addEventListener('click', () => {
-    //     color = 'purple';
-    //     hoverColor();
-    // });
-
-    // blackColor.addEventListener('click', () => {
-    //     color = 'black';
-    //     hoverColor();
-    // });
-
-    // whiteColor.addEventListener('click', () => {
-    //     color = 'white';
-    //     hoverColor();
-    // }); 
-
     setColor();
 }
-
-// function mouseDown() {
-//     const gridContainer = document.querySelector('gridContainer');
-//     let isMouseDown = false;
-
-//     gridContainer.addEventListener('mousedown', (e) => {
-//         isMouseDown = true;
-//         return isMouseDown;
-//     })
-//     return 
-// }
 
 function setColor() {
     let color;
@@ -72,7 +11,6 @@ function setColor() {
         color = e.target.id;
         hoverColor(color);
     }));
-    
 }
 
 function hoverRainbowColor() {
